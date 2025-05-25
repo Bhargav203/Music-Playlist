@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>💕Your Play List💕</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.2em;
+            color: #ffde59;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 2em;
+            color: #ffffffcc;
+        }
+
+        a {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: #ff4e50;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            border-radius: 30px;
+            transition: background 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        a:hover {
+            background-color: #ff6f61;
+            transform: translateY(-3px);
+        }
+
+        /* Optional music icon */
+        .music-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="music-icon">🎵</div>
+    <h1>Welcome to Your Playlist</h1>
+    <h2>Click "LISTEN" to enjoy the songs</h2>
+    <a href="songsList.html">LISTEN</a>
+</body>
+</html>

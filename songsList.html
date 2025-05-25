@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🎵 Songs List 🎵</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #2b5876, #4e4376);
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            margin-bottom: 30px;
+            color: #ffde59;
+        }
+
+        select {
+            padding: 12px 20px;
+            border-radius: 25px;
+            border: none;
+            font-size: 1em;
+            outline: none;
+            margin-right: 10px;
+            width: 250px;
+            background-color: #ffffff;
+            color: #333;
+            font-weight: 500;
+            transition: box-shadow 0.3s ease;
+        }
+
+        select:hover {
+            box-shadow: 0 0 10px #ffde59;
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 1em;
+            background-color: #ff4e50;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #ff6f61;
+            transform: translateY(-2px);
+        }
+
+        #divi {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #divi img {
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            max-width: 90%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        #divi img:hover {
+            transform: scale(1.02);
+        }
+
+        audio {
+            margin-top: 20px;
+            width: 80%;
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎶 Choose Your Favorite Song 🎶</h1>
+    
+    <select name="" id="s1">
+        <option value="Mungaru Maleyalli">Mungaru Maleyalli</option>
+        <option value="Hegidde nanu">Hegidde nanu</option>
+        <option value="Isqh wala love">Isqh wala love</option>
+        <option value="Madhura pisumatige">Madhura pisumatige</option>
+        <option value="pal">Pal</option>
+        <option value="Paravasha nadenu">Paravasha nadenu</option>
+        <option value="yavanig gottu">Yavanig gottu</option>
+        <option value="Chendutiya Pakkadali">Chendutiya Pakkadali</option>
+        <option value="Hoovina Santhege">Hoovina Santhege</option>
+        <option value="Guruvara Sanje">Guruvara Sanje</option>
+        <option value="Shiva Antha">Shiva Antha</option>
+    </select>
+
+    <button onclick="playList()">Play</button>
+
+    <div id="divi">
+        <div>
+            <img src="images/start.avif" alt="Album Art" height="400" width="500">
+        </div>
+        <audio controls>
+            <source src="" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script>
+        const song1 = document.getElementById("s1");
+        let divi = document.getElementById("divi");
+
+        function playList() {
+            divi.innerHTML = `
+                <div>
+                    <img src="images/${song1.value}.jpg" alt="${song1.value} Album Art" height="400" width="500">
+                </div>
+                <audio controls autoplay>
+                    <source src="music/${song1.value}.mp3" type="audio/mpeg">
+                </audio>
+            `;
+        }
+    </script>
+</body>
+</html>
